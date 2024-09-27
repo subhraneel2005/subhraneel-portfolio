@@ -1,6 +1,8 @@
-import React from "react";
+'use client'
+
+import React, { useState } from "react";
 import Link from "next/link";
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from "lucide-react";
+import { CalendarIcon, HomeIcon, MailIcon, MoonIcon, PencilIcon, SunIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -13,6 +15,7 @@ import {
 } from "@/components/ui/tooltip";
 import { Dock, DockIcon } from "@/components/ui/dock";
 import { Toggle } from "../ui/toggle";
+import { useTheme } from "next-themes";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -61,10 +64,6 @@ const Icons = {
 };
 
 const DATA = {
-  navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: PencilIcon, label: "Blog" },
-  ],
   contact: {
     social: {
       GitHub: {
@@ -92,32 +91,20 @@ const DATA = {
 };
 
 export function Docks() {
+
+  const { setTheme } = useTheme();
+  const [dark, setDark] = useState(false);
+
+  const themeHandler = () => {
+    setDark(!dark);
+    setTheme(dark ? "light" : "dark");
+  };
+
   return (
     <div>
+      <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2">
       <TooltipProvider>
         <Dock direction="middle">
-          {DATA.navbar.map((item) => (
-            <DockIcon key={item.label}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={item.href}
-                    aria-label={item.label}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full",
-                    )}
-                  >
-                    <item.icon className="size-4" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{item.label}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
-          <Separator orientation="vertical" className="h-full" />
           {Object.entries(DATA.contact.social).map(([name, social]) => (
             <DockIcon key={name}>
               <Tooltip>
@@ -139,8 +126,31 @@ export function Docks() {
               </Tooltip>
             </DockIcon>
           ))}
+          <DockIcon>
+            <Tooltip>
+              <TooltipTrigger>
+              <Toggle
+                    onPressedChange={themeHandler}
+                    className={cn(
+                      buttonVariants({ variant: "ghost", size: "icon" }),
+                      "size-12 rounded-full",
+                    )}
+                  >
+                    {dark ? (
+                      <SunIcon className="size-4" />
+                    ) : (
+                      <MoonIcon className="size-4" />
+                    )}
+                  </Toggle>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Theme</p>
+              </TooltipContent>
+            </Tooltip>
+          </DockIcon>
         </Dock>
       </TooltipProvider>
+      </div>
     </div>
   );
 }
