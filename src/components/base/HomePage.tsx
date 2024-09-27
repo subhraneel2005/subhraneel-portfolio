@@ -25,10 +25,9 @@ export default function HomePage() {
         </div>
         <div className='h-full w-full flex flex-col justify-center items-center mt-14 md:mt-24' >
           <Badge className='text-[16px] rounded-xl'>Projects</Badge>
-          <h1 className='font-bold text-black dark:text-white md:text-5xl text-3xl tracking-tight md:leading-[5rem]'>Check out my latest work</h1>
+          <h1 className='font-bold text-black mt-2 dark:text-white md:text-5xl text-3xl tracking-tight md:leading-[5rem]'>Check out my latest works</h1>
           <p className='text-gray-600 dark:text-gray-400 text-[16px] md:text-[24px] max-w-2xl text-center'>I have worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.</p>
         </div>
-        <ProjectCard/>
     </div>
   )
 }

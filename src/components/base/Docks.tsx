@@ -68,22 +68,22 @@ const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "#",
+        url: "https://github.com/subhraneel2005",
         icon: Icons.github,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/in/subhraneel-goswami-599931282/",
         icon: Icons.linkedin,
       },
       X: {
         name: "X",
-        url: "#",
+        url: "https://x.com/Subhraneel55545",
         icon: Icons.x,
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:subhraneeljobs@gmail.com",
         icon: Icons.email,
       },
     },
@@ -111,6 +111,7 @@ export function Docks() {
                 <TooltipTrigger asChild>
                   <Link
                     href={social.url}
+                    target="_blank"
                     aria-label={social.name}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
