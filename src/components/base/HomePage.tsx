@@ -1,6 +1,5 @@
 import React from 'react'
 import WordPullUp from '../ui/word-pull-up'
-import ProjectCard from './ProjectCard'
 import Image from 'next/image'
 import { Badge } from '../ui/badge'
 
@@ -12,7 +11,7 @@ export default function HomePage() {
           <div className='max-w-4xl'>
             <WordPullUp
               className="font-bold text-black dark:text-white md:text-7xl text-5xl md:leading-[5rem]"
-              words="Hi, I'm Subhraneel👋"
+              words="Hi, I&apos;m Subhraneel👋"
             />
             <WordPullUp
               className="mt-4 text-gray-600 dark:text-gray-400 text-[16px] md:text-[24px] max-w-3xl px-4"
@@ -25,7 +24,7 @@ export default function HomePage() {
         </div>
         <div className='h-full w-full flex flex-col justify-center items-center mt-14 md:mt-24' >
           <Badge className='text-[16px] rounded-xl'>Projects</Badge>
-          <h1 className='font-bold text-black mt-2 dark:text-white md:text-5xl text-3xl tracking-tight md:leading-[5rem]'>Check out my latest works</h1>
+          <h1 className='font-bold text-center text-black mt-2 dark:text-white md:text-5xl text-3xl tracking-tight md:leading-[5rem]'>Check out my latest projects</h1>
           <p className='text-gray-600 dark:text-gray-400 text-[16px] md:text-[24px] max-w-2xl text-center'>I have worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.</p>
         </div>
     </div>
