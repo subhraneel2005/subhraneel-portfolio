@@ -5,7 +5,7 @@ import { Badge } from '../ui/badge'
 
 export default function Freelance() {
   return (
-    <div className='min-h-screen h-full flex flex-col justify-center items-center mt-20'>
+    <div className='min-h-screen w-full flex flex-col justify-center items-center mt-20'>
         <Badge className='text-[16px] rounded-xl'>Freelance Works</Badge>
         <h1 className='text-center font-bold text-black mt-2 dark:text-white md:text-5xl text-3xl tracking-tight md:leading-[5rem]'>Check out my Freelance works</h1>
         <p className='text-gray-600 dark:text-gray-400 text-[16px] md:text-[24px] max-w-2xl text-center'>I&apos;m working on several freelance projects, with more to be added soon. 😉</p>

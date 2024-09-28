@@ -3,6 +3,7 @@ import Footer from "@/components/base/Footer";
 import Freelance from "@/components/base/Freelance";
 import HomePage from "@/components/base/HomePage";
 import Projects from "@/components/base/Projects";
+import Skills from "@/components/base/Skills";
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <HomePage/>
       <Projects/>
       <Freelance/>
+      <Skills/>
       <Footer/>
       <Docks/>
     </>
