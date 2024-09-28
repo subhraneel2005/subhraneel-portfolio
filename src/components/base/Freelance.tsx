@@ -15,7 +15,7 @@ export default function Freelance() {
               videoSrc="/innovacion.mp4"
               title="University Event Website (Innovacion)"
               dateRange="Jul 2024 - Sep 2024"
-              description="Built the website for our university biggest event.  Developed a responsive design and implemented a user-friendly interface. With a Space themed UI using Figma. Iproved Teamwork witj my team to delivered the project on time."
+              description="Built the website for our university biggest event.  Developed a responsive design and implemented a user-friendly interface. With a Space themed UI using Figma. Iproved Teamwork with my team to delivered the project on time."
 
 
 
