@@ -29,7 +29,7 @@ export default function Skills() {
     <div className='py-16 w-full flex flex-col justify-center items-center'>
       <Badge className='text-[16px] rounded-xl'>Skills</Badge>
       <h1 className='text-center font-bold px-4 text-black mt-2 dark:text-white md:text-5xl text-3xl tracking-tight md:leading-[5rem]'>
-        Technologies I&apos;m interested in
+        Technologies I work with
       </h1>
       <p className='text-gray-600 px-4 dark:text-gray-400 text-[16px] md:text-[24px] max-w-2xl text-center'>On my way to master them and become a 10x developer</p>
       <div className='mt-8 grid grid-cols-2 md:grid-cols-4 gap-6'>
