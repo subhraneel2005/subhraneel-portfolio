@@ -25,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   codeUrl 
 }) => {
   return (
-    <Card className="w-[340px] h-[550px] md:w-[450px] md:h-[600px]">
+    <Card className="w-[340px] h-[600px] md:w-[450px] md:h-[600px]">
       <CardHeader>
         <video
           className="rounded-lg"

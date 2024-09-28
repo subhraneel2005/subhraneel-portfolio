@@ -11,7 +11,7 @@ export default function Projects() {
               dateRange="Sep 2024 - Current"
               description="This tool lets creators set up photo or thumbnail clashes, allowing their followers to vote and comment in real-time using Redis. It's built with a secure Node.js and TypeScript backend, reusable React components powered by Next.js, and includes email verification, password reset, and forget password features using Nodemailer and Redis Queue (BullMQ)."
 
-              badges={['Next.js', 'TypeScript', 'Node.js', 'Express.js', 'JWT', 'Redis', 'BullMq', 'Prisma', 'Postgres', 'Next-Auth', 'NodeMailer']}
+              badges={['Next.js', 'TypeScript', 'Node.js', 'Express.js', 'JWT', 'Redis', 'Prisma', 'Postgres', 'Next-Auth', 'NodeMailer']}
               websiteUrl="https://github.com/subhraneel2005/Kalesh-v1"
               codeUrl="https://github.com/subhraneel2005/Kalesh-v1"
             />
