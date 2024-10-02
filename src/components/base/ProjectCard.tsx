@@ -1,6 +1,8 @@
+'use client'
+
+import { useEffect, useRef, useState } from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import Image from 'next/image'; // Assuming you use Next.js Image component for performance
 import { GitBranch, Globe } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
@@ -24,16 +26,43 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   websiteUrl, 
   codeUrl 
 }) => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect(); // Stop observing once the video is in view
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the video is visible
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) observer.unobserve(videoRef.current);
+    };
+  }, []);
+
   return (
     <Card className="w-[340px] h-[600px] md:w-[450px] md:h-[600px]">
       <CardHeader>
         <video
+          ref={videoRef}
           className="rounded-lg"
-          src={videoSrc}
-          autoPlay 
+          src={isVisible ? videoSrc : undefined} // Load video only when visible
+          autoPlay={isVisible}
           loop 
           muted 
           playsInline
+          preload="metadata"
         />
       </CardHeader>
       <CardContent>
