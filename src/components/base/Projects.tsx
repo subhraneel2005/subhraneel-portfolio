@@ -5,15 +5,14 @@ export default function Projects() {
   return (
     <div className="min-h-screen h-full flex justify-center items-center md:-mt-36 -mt-14">
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6'>
-          <ProjectCard
-              videoSrc="/kalesh.mp4"
-              title="Kalesh -v1"
+        <ProjectCard
+              videoSrc="/blog-buddies.mp4"
+              title="Blog Buddies"
               dateRange="Sep 2024 - Current"
-              description="This tool lets creators set up photo or thumbnail clashes, allowing their followers to vote and comment in real-time using Redis. It's built with a secure Node.js and TypeScript backend, reusable React components powered by Next.js, and includes email verification, password reset, and forget password features using Nodemailer and Redis Queue (BullMQ)."
-
-              badges={['Next.js', 'TypeScript', 'Node.js', 'Express.js', 'JWT', 'Redis', 'Prisma', 'Postgres', 'Next-Auth', 'NodeMailer']}
-              websiteUrl="https://github.com/subhraneel2005/Kalesh-v1"
-              codeUrl="https://github.com/subhraneel2005/Kalesh-v1"
+              description="Building Blog Buddies, an open-source, distraction-free platform for developers to share ideas. With a minimalist, ad-free design, its built by devs, for devs. You can contribute, request features, report bugs, or raise issues to help shape it!"
+              badges={['Next.js', 'Typescript', 'PostgreSQL', 'Prisma', 'Next-Auth', 'ReactMDE', 'Cloudinary', 'Multer', 'Shadcn UI']}
+              websiteUrl="https://blog-buddies.vercel.app/"
+              codeUrl="https://github.com/subhraneel2005/blog-buddies"
             />
             <ProjectCard
               videoSrc="/imagevault.mp4"
@@ -23,6 +22,16 @@ export default function Projects() {
               badges={['Next.js', 'Typescript', 'MongoDb', 'Prisma', 'Next-Auth', 'TailwindCSS', 'Pixabay API', 'Shadcn UI']}
               websiteUrl="https://image-vault-io.vercel.app/"
               codeUrl="https://github.com/subhraneel2005/gdg-task-pixabay"
+            />
+          <ProjectCard
+              videoSrc="/kalesh.mp4"
+              title="Kalesh -v1"
+              dateRange="Sep 2024 - Current"
+              description="This tool lets creators set up photo or thumbnail clashes, allowing their followers to vote and comment in real-time using Redis. It's built with a secure Node.js and TypeScript backend, reusable React components powered by Next.js, and includes email verification, password reset, and forget password features using Nodemailer and Redis Queue (BullMQ)."
+
+              badges={['Next.js', 'TypeScript', 'Node.js', 'Express.js', 'JWT', 'Redis', 'Prisma', 'Postgres', 'Next-Auth', 'NodeMailer']}
+              websiteUrl="https://github.com/subhraneel2005/Kalesh-v1"
+              codeUrl="https://github.com/subhraneel2005/Kalesh-v1"
             />
             <ProjectCard
               videoSrc="/tutorialtracker.mp4"
