@@ -43,6 +43,15 @@ export default function Projects() {
               codeUrl="https://github.com/subhraneel2005/Tutorial-Tracker"
             />
             <ProjectCard
+              videoSrc="/roomify.mp4"
+              title="Roomify"
+              dateRange="Sep 2024 - Sep 2024"
+              description="Built Rommify, an open-source video calling platform similar to Zoom. Powered by Next.js, Clerk for authentication, and GetStream.io for video streaming, it's designed for seamless and secure virtual meetings."
+              badges={['Next.js', 'Typescript', 'Get Stream.io', 'Clerk Auth', 'Tailwind css']}
+              websiteUrl="https://roomify-gamma.vercel.app/"
+              codeUrl="https://github.com/subhraneel2005/Roomify"
+            />
+            <ProjectCard
               videoSrc="/moodmate.mp4"
               title="Mood-Mate"
               dateRange="Aug 2024 - Jun 2024"
