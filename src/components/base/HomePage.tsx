@@ -6,20 +6,20 @@ import { Badge } from '../ui/badge'
 export default function HomePage() {
   return (
     <div className='min-h-screen h-full flex flex-col justify-center items-center'>
-        <div className='flex flex-wrap gap-6'>
-          <Image src='/pfp2.jpeg' alt='pfp' width={150} height={150}  className='rounded-full hidden md:flex object-contain' />
+        <div className='flex flex-wrap gap-6 pt-6'>
+          <Image src='/pfp2.jpeg' alt='pfp' width={140} height={140}  className='rounded-[24px] hidden md:flex object-contain' />
           <div className='max-w-4xl'>
             <WordPullUp
-              className="font-bold text-black dark:text-white md:text-7xl text-5xl md:leading-[5rem]"
+              className="font-bold text-black dark:text-white md:text-6xl text-5xl md:leading-[5rem]"
               words="Hi, I&apos;m Subhraneel👋"
             />
             <WordPullUp
-              className="mt-4 text-gray-600 dark:text-gray-400 text-[16px] md:text-[24px] max-w-3xl px-4"
+              className="mt-4 text-gray-600 dark:text-gray-400 text-[16px] md:text-[22px] max-w-3xl px-4"
               words="Software Engineer and Web3.0 Enthusiast. I love building cool stuffs. Nice meeting you, do check out my projects below😉."
             />
           </div>
           <div className='flex md:hidden justify-center items-center w-full h-full'>
-          <Image src='/pfp.png' alt='pfp' width={150} height={150}  className='rounded-full w-[80px] object-contain' />
+          <Image src='/pfp2.jpeg' alt='pfp' width={150} height={150}  className='rounded-full w-[80px] object-contain' />
           </div>
         </div>
         <div className='h-full w-full flex flex-col justify-center items-center mt-14 md:mt-24' >
