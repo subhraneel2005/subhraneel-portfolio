@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <div className='min-h-screen h-full flex flex-col justify-center items-center'>
         <div className='flex flex-wrap gap-6'>
-          <Image src='/pfp.png' alt='pfp' width={150} height={150}  className='rounded-full hidden md:flex object-contain' />
+          <Image src='/pfp2.jpeg' alt='pfp' width={150} height={150}  className='rounded-full hidden md:flex object-contain' />
           <div className='max-w-4xl'>
             <WordPullUp
               className="font-bold text-black dark:text-white md:text-7xl text-5xl md:leading-[5rem]"
