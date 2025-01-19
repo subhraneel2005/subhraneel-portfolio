@@ -8,7 +8,7 @@ export default function Projects() {
         <ProjectCard
               imageSrc="/hashsync.png"
               title="HashSync"
-              description="Building Blog Buddies, an open-source, distraction-free platform for developers to share ideas. With a minimalist, ad-free design, its built by devs, for devs. You can contribute, request features, report bugs, or raise issues to help shape it!"
+              description="🚀 Write in Notion. Publish on Hashnode. Seamlessly"
               badges={['Next.js', 'Typescript', 'Notion API', 'GraphQL', 'PostgreSQL', 'Prisma', 'Next-Auth']}
               websiteUrl="https://github.com/subhraneel2005/HashSync"
               codeUrl="https://github.com/subhraneel2005/HashSync"
