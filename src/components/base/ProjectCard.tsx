@@ -1,16 +1,13 @@
-'use client'
 
-import { useEffect, useRef, useState } from 'react';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { GitBranch, Globe } from 'lucide-react';
+import {  Globe } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 
 interface ProjectCardProps {
-  videoSrc: string;
+  imageSrc: string;
   title: string;
-  dateRange: string;
   description: string;
   badges: string[];
   websiteUrl?: string;  
@@ -18,56 +15,26 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ 
-  videoSrc, 
+  imageSrc, 
   title, 
-  dateRange, 
   description, 
   badges, 
   websiteUrl, 
   codeUrl 
 }) => {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.disconnect(); // Stop observing once the video is in view
-          }
-        });
-      },
-      { threshold: 0.5 } // Trigger when 50% of the video is visible
-    );
 
-    if (videoRef.current) {
-      observer.observe(videoRef.current);
-    }
-
-    return () => {
-      if (videoRef.current) observer.unobserve(videoRef.current);
-    };
-  }, []);
 
   return (
     <Card className="w-[340px] h-[600px] md:w-[450px] md:h-[600px]">
       <CardHeader>
-        <video
-          ref={videoRef}
+        <img
           className="rounded-lg"
-          src={isVisible ? videoSrc : undefined} // Load video only when visible
-          autoPlay={isVisible}
-          loop 
-          muted 
-          playsInline
-          preload="metadata"
+          src={imageSrc}
         />
       </CardHeader>
       <CardContent>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{dateRange}</CardDescription>
         <p className="text-sm dark:text-gray-300 text-gray-600 mt-2">
           {description}
         </p>
